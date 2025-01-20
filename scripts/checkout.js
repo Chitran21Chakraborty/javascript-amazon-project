@@ -7,9 +7,11 @@ import {deliveryOptions} from '../data/deliveryOptions.js';
 
 hello();
 
-// const today =  dayjs();
-// const deliveryDate = today.add(7, 'days');
-// console.log(deliveryDate.format('dddd, MMMM D'));
+const today =  dayjs();
+const deliveryDate = today.add(7, 'days');
+console.log(deliveryDate.format('dddd, MMMM D'));
+
+function renderOrederSummary () {
 
 let cartSummaryHTML = '';
 
@@ -146,7 +148,10 @@ document.querySelectorAll('.js-delete-link')
     element.addEventListener('click', () => {
       const {productId,deliveryOptionsId} = element.dataset; //shorthand property
       updateDeliveryOption(productId, deliveryOptionsId);
-    })
+      renderOrederSummary();
+    });
   });
 
-  
+}
+
+renderOrederSummary();

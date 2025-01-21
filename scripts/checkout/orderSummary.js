@@ -7,7 +7,7 @@ import {deliveryOptions, getDeliveryOption} from '../../data/deliveryOptions.js'
 import {renderPaymentsummary} from './paymentSummary.js';
 
 
-
+//model view controller
 
 export function renderOrederSummary () {
 
